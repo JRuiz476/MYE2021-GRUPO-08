@@ -1,0 +1,38 @@
+int ValorSensor;
+int ValorMinimoSensor = 1023;
+int ValorMaximoSensor = 0;
+int tono;
+
+const int PinLED = 13;
+
+void setup()
+{
+  pinMode(PinLED, 13);
+  digitalWrite(PinLED, HIGH);
+  
+  while (millis() < 2000)
+  {
+    ValorSensor = analogRead(A0);
+    
+    if (ValorSensor > ValorMinimoSensor)
+    {
+      ValorMinimoSensor = ValorSensor;
+    }
+    else if (ValorSensor < ValorMaximoSensor)
+    {
+      ValorMaximoSensor = ValorSensor;
+    }
+  }
+  digitalWrite(PinLED, LOW);
+}
+
+void loop()
+{
+  ValorSensor = analogRead(A0);
+  
+  tono = map(ValorSensor, ValorMinimoSensor, ValorMaximoSensor, 50, 4000);
+  
+  tone (8,tono,20);
+  
+  delay(50);
+}

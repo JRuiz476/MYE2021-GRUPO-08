@@ -1,0 +1,5 @@
+Esta carpeta contiene el modelo en Tinkercad y el código fuente final del proyecto funcional. Se hizo esta carpeta por el hecho de que se hizo dos pruebas anteriores:
+Una con una fotorresistencia LDR, y la otra con el sensor ultrasónico y un LED RGB. No obstante, no nos funcionó el código ni la fotorresistencia en el primero,
+y no nos funcionó la calibración del sensor en el segundo.
+
+El tercero descarta el LED RGB y la fotorresistencia LDR. Sólo se utiliza el sensor ultrasónico y el piezo (buzzer).
